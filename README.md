@@ -20,7 +20,7 @@
 <img src="src/test/resources/images/logos/docker.svg" width="45" /> `Docker` - запуск автотестов в изолированных сессиях на билд-сервере;<br/>
 <img src="src/test/resources/images/logos/allure.svg" width="28" /> `Allure Report` - формирование отчетности по итогам тестирования;<br/>
 <img src="src/test/resources/images/logos/allure_testops.svg" width="24.5" /> `Allure TestOps` - создание тестовой документации;<br/>
-<img src="src/test/resources/images/logos/jira.svg" width="27" /> `Jira` - создание задачи в таск-трекере.
+<img src="src/test/resources/images/logos/jira.svg" width="30" /> `Jira` - создание задачи в таск-трекере.
 
 
 ---
