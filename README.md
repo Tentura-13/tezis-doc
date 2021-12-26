@@ -114,5 +114,5 @@ java "-DprojectName=${JOB_NAME}" "-Denv=<enviroment>" "-DreportLink=${BUILD_URL}
 ![](src/test/resources/images/screenshots/allure_testops_1.png)<br/><br/>
 ![](src/test/resources/images/screenshots/allure_testops_2.png)
 
-### Задача в таск-трекере Jira с данными, экспортированными из Allure TestOps
+### [Задача](https://jira.autotests.cloud/projects/AUTO/issues/AUTO-501?filter=allopenissues) в таск-трекере Jira с данными, экспортированными из Allure TestOps
 ![](src/test/resources/images/screenshots/jira.png)
