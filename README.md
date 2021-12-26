@@ -52,26 +52,26 @@ test
 
 ---
 ### Настройка оповещений
-Для настройки рассылок оповещений о результатах прогона тестов в мессенджеры, например, Telegram и Slack, используется приложение jar приложение из репозитория проекта [Allure notifications](https://github.com/qa-guru/allure-notifications/releases). В настройках послесборочных операций Jenkins job добавлен **Post Buil Task** со скриптом, который проверяет наличие jar-файла allure-notifications в корне репозитория проекта и, при его отсутствии, скачивает данный файл из репозитория https://github.com/qa-guru/allure-notifications/releases
+Для настройки рассылок оповещений о результатах прогона тестов в мессенджеры, например, Telegram и Slack, используется приложение [Allure notifications](https://github.com/qa-guru/allure-notifications). В настройках послесборочных операций Jenkins job добавлен **Post Buil Task** со скриптом, который проверяет наличие jar-файла allure-notifications в корне репозитория проекта и, при его отсутствии, скачивает данный файл из репозитория:
 ```
 cd ..
-FILE=./allure-notifications-${ALLURE_NOTIFICATIONS_VERSION}.jar
+FILE=./allure-notifications-3.1.2.jar
 if [ ! -f "$FILE" ]; then
-   wget https://github.com/qa-guru/allure-notifications/releases/download/${ALLURE_NOTIFICATIONS_VERSION}/allure-notifications-${ALLURE_NOTIFICATIONS_VERSION}.jar
+   wget https://github.com/qa-guru/allure-notifications/releases/download/3.1.2/allure-notifications-3.1.2.jar
 fi
 ```
 Также в настройках сборки добавлены шаги сборки **Create/Update Text File** для создания json-файлов, содержащих идентификационные данные приложений-ботов и чатов в мессенджерах, в которые производится отправка оповещений. Для каждого мессенджера создан **Post Buil Task** со скриптом, который запускает рассылку оповещений:
 
 ```
-java "-DprojectName=${JOB_NAME}" "-Denv=<enviroment>" "-DreportLink=${BUILD_URL}" "-Dcomm=<some comment>" "-Dconfig.file=./src/test/resources/notifications/<messenger name>.json" -jar ../allure-notifications-{ALLURE_NOTIFICATIONS_VERSION}.jar
+java "-DprojectName=${JOB_NAME}" "-Denv=<enviroment>" "-DreportLink=${BUILD_URL}" "-Dcomm=<some comment>" "-Dconfig.file=./src/test/resources/notifications/<messenger name>.json" -jar ../allure-notifications-3.1.2.jar
 ```
 ---
-### Результаты прогона тестов
+### Результаты выполнения тестов
 
 
 ![](src/test/resources/images/logos/build.svg)
 ### Сборка Jenkins
-:arrow_right: [**Jenkins Job**](https://jenkins.autotests.cloud/job/08-parenkov-fedor-tezis-doc/) :arrow_left:
+:arrow_right: [**Jenkins Job**](https://jenkins.autotests.cloud/job/08-WakeUpTheo-Tezis/) :arrow_left:
 
 ---
 ### Отчет в Allure Report
@@ -113,3 +113,6 @@ java "-DprojectName=${JOB_NAME}" "-Denv=<enviroment>" "-DreportLink=${BUILD_URL}
 ### Тестовая документация, сгенерированная в Allure TestOps по итогам прогона тестов
 ![](src/test/resources/images/screenshots/allure_testops_1.png)<br/><br/>
 ![](src/test/resources/images/screenshots/allure_testops_2.png)
+
+### Задача в таск-трекере Jira с данными, экспортированными из Allure TestOps
+![](src/test/resources/images/screenshots/jira.png)
