@@ -1,7 +1,13 @@
 package parenkov.tests;
 
 import com.codeborne.selenide.WebDriverRunner;
-import io.qameta.allure.*;
+import io.qameta.allure.AllureId;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.Link;
+import io.qameta.allure.Allure;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -9,13 +15,19 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import java.time.Duration;
 
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.cssValue;
+import static com.codeborne.selenide.Condition.disappear;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.title;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@Owner("Fedor Parenkov")
 @Feature("Header главной страницы")
 public class HeaderTests extends TestBase {
 
