@@ -19,7 +19,8 @@
 <img src="src/test/resources/images/logos/selenoid.svg" width="35" /> `Selenoid` 
 <img src="src/test/resources/images/logos/docker.svg" width="45" /> `Docker` - запуск автотестов в изолированных сессиях на билд-сервере;<br/>
 <img src="src/test/resources/images/logos/allure.svg" width="28" /> `Allure Report` - формирование отчетности по итогам тестирования;<br/>
-<img src="src/test/resources/images/logos/allure_testops.svg" width="24.5" /> `Allure TestOps` - создание тестовой документации.
+<img src="src/test/resources/images/logos/allure_testops.svg" width="24.5" /> `Allure TestOps` - создание тестовой документации;<br/>
+<img src="src/test/resources/images/logos/jira.svg" width="24.5" /> `Jira` - создание задачи в таск-трекере.
 
 
 ---
@@ -32,8 +33,8 @@ test
 -Dbrowser=${BROWSER} // запускаемый браузер
 -DbrowserVersion=${BROWSER_VERSION} // версия браузера
 -DbrowserSize=${BROWSER_SIZE} // размер окна браузера
--DremoteDriverUrl=https://<username>:<password>@${REMOTE_DRIVER_URL}/wd/hub/ // URL сервера, на котором запускаются тесты
--DvideoStorage=https://${REMOTE_DRIVER_URL}/video/ // URL сервера с видеофайлами выполнения тестов
+-DremoteDriverUrl=${REMOTE_DRIVER_URL}/wd/hub/ // URL сервера, на котором запускаются тесты
+-DvideoStorage=${REMOTE_DRIVER_URL}/video/ // URL сервера с видеофайлами выполнения тестов
 -Dthreads=${THREADS} // число потоков для прогона тестов
 ```
 Другой вариант передачи параметров - из файла remote.properties, расположенного по пути `src/test/resources/config/remote.properties`. Для этого вместо установки **Choice Parameter** в настройках Jenkins создается шаг сборки **Create/Update Text File** с созданием текстового файла, содержащего конфигурационные данные:<br/><br/>
