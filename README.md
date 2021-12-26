@@ -44,7 +44,7 @@ test
 ![](src/test/resources/images/screenshots/build_params.png)
 
 ---
-### Интеграция с Allure Report и Allure TestOps
+### Интеграция с [Allure Report](https://docs.qameta.io/allure-report/) и [Allure TestOps](https://docs.qameta.io/allure-testops/)
 Результаты выполнения сборки для Allure Report формируются в директории `build/allure-results`<br/><br/>
 ![](src/test/resources/images/screenshots/allure_task.png)<br/><br/>
 Интеграция с Allure TestOps задается в настройках среды сборки<br/><br/>
