@@ -3,7 +3,8 @@ package parenkov.config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "system:properties"
+        "system:properties",
+        "classpath:config/remote.properties"
 })
 public interface ProjectConfig extends Config {
 
