@@ -45,7 +45,7 @@ test
 
 ---
 ### Интеграция с Allure Report и Allure TestOps
-Результаты выполнения сборки Allure Report формируются в директории `build/allure-results`<br/><br/>
+Результаты выполнения сборки для Allure Report формируются в директории `build/allure-results`<br/><br/>
 ![](src/test/resources/images/screenshots/allure_task.png)<br/><br/>
 Интеграция с Allure TestOps задается в настройках среды сборки<br/><br/>
 ![](src/test/resources/images/screenshots/allure-server.png)
