@@ -2,6 +2,7 @@ package parenkov.config;
 
 import org.aeonbits.owner.Config;
 
+@Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
         "system:properties",
         "classpath:config/remote.properties"
