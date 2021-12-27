@@ -51,21 +51,6 @@ test
 ![](src/test/resources/images/screenshots/allure-server.png)
 
 ---
-### Настройка оповещений
-Для настройки рассылок оповещений о результатах прогона тестов в мессенджеры, например, Telegram и Slack, используется приложение [Allure notifications](https://github.com/qa-guru/allure-notifications). В Jenkins job добавлен **Post Buil Task** со скриптом, который проверяет наличие jar-файла allure-notifications в корне репозитория проекта и, при его отсутствии, скачивает приложение из репозитория:
-```
-cd ..
-FILE=./allure-notifications-3.1.2.jar
-if [ ! -f "$FILE" ]; then
-   wget https://github.com/qa-guru/allure-notifications/releases/download/3.1.2/allure-notifications-3.1.2.jar
-fi
-```
-Также в настройках сборки добавлены шаги сборки **Create/Update Text File** для создания json-файлов, содержащих идентификационные данные приложений-ботов и чатов в мессенджерах, в которые производится отправка оповещений. Для каждого мессенджера создан **Post Buil Task** со скриптом, который запускает рассылку оповещений:
-
-```
-java "-DprojectName=${JOB_NAME}" "-Denv=<enviroment>" "-DreportLink=${BUILD_URL}" "-Dcomm=<some comment>" "-Dconfig.file=./src/test/resources/notifications/<messenger name>.json" -jar ../allure-notifications-3.1.2.jar
-```
----
 ### Результаты выполнения тестов
 
 
