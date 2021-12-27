@@ -110,7 +110,7 @@ java "-DprojectName=${JOB_NAME}" "-Denv=<enviroment>" "-DreportLink=${BUILD_URL}
 ![](src/test/resources/images/screenshots/telegram_notice.png)
 
 ---
-### Тестовая документация, сгенерированная в Allure TestOps по итогам прогона тестов
+### Тестовая документация, сгенерированная в [Allure TestOps](https://allure.autotests.cloud/project/670/dashboards) по итогам прохождения тестов
 ![](src/test/resources/images/screenshots/allure_testops_1.png)<br/><br/>
 ![](src/test/resources/images/screenshots/allure_testops_2.png)
 
