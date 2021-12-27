@@ -1,4 +1,4 @@
-## <p align="center">Пример создания автотестов для [сайта](https://www.tezis-doc.ru/)<br/>системы электронного документооборота <img src="src/test/resources/images/logos/tezis.svg" width="100" /></p>
+## <p align="center">Автоматизация UI тестов на примере [сайта](https://www.tezis-doc.ru/)<br/>системы электронного документооборота <img src="src/test/resources/images/logos/tezis.svg" width="100" /></p>
 В данном проекте представлен пример создания UI автотестов для web-версии сайта https://www.tezis-doc.ru.<br/>
 Тестируемая функциональность - элементы модуля **Header главной страницы**:
 - Title главной страницы;
