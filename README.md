@@ -1,4 +1,4 @@
-## Автоматизация UI тестов на примере [сайта](https://www.tezis-doc.ru/)<br/>системы электронного документооборота <img src="src/test/resources/images/logos/tezis.svg" width="100" />
+## Автоматизация UI тестов на примере [сайта](https://www.tezis-doc.ru/) системы электронного документооборота <img src="src/test/resources/images/logos/tezis.svg" width="100" />
 В данном проекте представлен пример создания UI автотестов для web-версии сайта https://www.tezis-doc.ru.<br/>
 Тестируемая функциональность - элементы модуля **Header главной страницы**:
 - Title главной страницы;
