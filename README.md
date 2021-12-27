@@ -12,8 +12,8 @@
 <img src="src/test/resources/images/logos/java.svg" width="27" /> `Java` 
 <img src="src/test/resources/images/logos/selenide.svg" width="42" /> `Selenide` 
 <img src="src/test/resources/images/logos/junit.svg" width="33" /> `JUnit` - написание исходного кода;<br/>
-<img src="src/test/resources/images/logos/gradle.svg" width="35" height="35" /> `Gradle` 
-<img src="src/test/resources/images/logos/jenkins.svg" width="35" height="35" /> `Jenkins` - сборка и запуск автотестов на удаленном билд-сервере;<br/>
+<img src="src/test/resources/images/logos/gradle.svg" width="35" height="35" /> `Gradle` - сборка проекта;<br/>
+<img src="src/test/resources/images/logos/jenkins.svg" width="35" height="35" /> `Jenkins` - конфигурация и запуск сборок;<br/>
 <img src="src/test/resources/images/logos/selenoid.svg" width="35" /> `Selenoid` 
 <img src="src/test/resources/images/logos/docker.svg" width="45" /> `Docker` - запуск автотестов в изолированных сессиях на билд-сервере;<br/>
 <img src="src/test/resources/images/logos/allure.svg" width="28" /> `Allure Report` - формирование отчетности по итогам тестирования;<br/>
