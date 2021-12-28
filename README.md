@@ -23,7 +23,7 @@
 
 ---
 ### Конфигурация для запуска тестов
-Для запуска автотестов сконфигурирована :arrow_right: **[job](https://jenkins.autotests.cloud/job/08-WakeUpTheo-Tezis/)** :arrow_left: в CI Jenkins. В настройках Jenkins job добавлена интеграция с Allure Report и Allure TestOps, а также настроена расслылка оповещений о результатах выполнения тестов в мессенджеры Slack и Telegram.<br/>
+Для запуска автотестов сконфигурирована :arrow_right: **[job](https://jenkins.autotests.cloud/job/08-WakeUpTheo-Tezis/)** :arrow_left: в CI Jenkins. В настройках Jenkins job добавлена интеграция с [Allure Report](https://docs.qameta.io/allure/) и [Allure TestOps](https://docs.qameta.io/allure-testops/), а также настроена расслылка оповещений о результатах выполнения тестов в мессенджеры Slack и Telegram.<br/>
 Параметры для запуска автотестов в удаленном браузере на билд-сервере проекта [autotests.cloud](https://selenoid.autotests.cloud/) задаются в настройках job [CI Jenkins](https://jenkins.autotests.cloud/) в виде **Choice Parameter** и передаются в код проекта через терминал как системные переменные с помощью следующих команд:
 
 ```
