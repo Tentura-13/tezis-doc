@@ -55,9 +55,6 @@ test
 ### Результаты выполнения тестов
 
 
-![](src/test/resources/images/logos/build.svg)
-
-
 ### Отчет в Allure Report
 ![](src/test/resources/images/screenshots/allure_3.png)
 ![](src/test/resources/images/screenshots/allure_4.png)
