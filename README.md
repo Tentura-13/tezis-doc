@@ -1,5 +1,5 @@
 ## Автоматизация UI тестов на примере [сайта](https://www.tezis-doc.ru/) системы электронного документооборота <img src="src/test/resources/images/logos/tezis.svg" width="100" />
-В данном проекте представлен пример создания UI автотестов для web-версии сайта https://www.tezis-doc.ru.<br/>
+В данном проекте представлен пример UI автотестов для web-версии сайта https://www.tezis-doc.ru.<br/>
 Тестируемая функциональность - элементы модуля **Header главной страницы**:
 - Title главной страницы;
 - Логотип;
@@ -12,8 +12,8 @@
 <img src="src/test/resources/images/logos/java.svg" width="27" /> `Java` 
 <img src="src/test/resources/images/logos/selenide.svg" width="42" /> `Selenide` 
 <img src="src/test/resources/images/logos/junit.svg" width="33" /> `JUnit` - написание исходного кода;<br/>
-<img src="src/test/resources/images/logos/gradle.svg" width="35" height="35" /> `Gradle` 
-<img src="src/test/resources/images/logos/jenkins.svg" width="35" height="35" /> `Jenkins` - сборка и запуск автотестов на удаленном билд-сервере;<br/>
+<img src="src/test/resources/images/logos/gradle.svg" width="35" height="35" /> `Gradle` - сборка проекта;<br/>
+<img src="src/test/resources/images/logos/jenkins.svg" width="35" height="35" /> `Jenkins` - конфигурация и запуск сборок;<br/>
 <img src="src/test/resources/images/logos/selenoid.svg" width="35" /> `Selenoid` 
 <img src="src/test/resources/images/logos/docker.svg" width="45" /> `Docker` - запуск автотестов в изолированных сессиях на билд-сервере;<br/>
 <img src="src/test/resources/images/logos/allure.svg" width="28" /> `Allure Report` - формирование отчетности по итогам тестирования;<br/>
@@ -50,21 +50,6 @@ test
 Интеграция с Allure TestOps задается в настройках среды сборки<br/><br/>
 ![](src/test/resources/images/screenshots/allure-server.png)
 
----
-### Настройка оповещений
-Для настройки рассылок оповещений о результатах прогона тестов в мессенджеры, например, Telegram и Slack, используется приложение [Allure notifications](https://github.com/qa-guru/allure-notifications). В Jenkins job добавлен **Post Buil Task** со скриптом, который проверяет наличие jar-файла allure-notifications в корне репозитория проекта и, при его отсутствии, скачивает приложение из репозитория:
-```
-cd ..
-FILE=./allure-notifications-3.1.2.jar
-if [ ! -f "$FILE" ]; then
-   wget https://github.com/qa-guru/allure-notifications/releases/download/3.1.2/allure-notifications-3.1.2.jar
-fi
-```
-Также в настройках сборки добавлены шаги сборки **Create/Update Text File** для создания json-файлов, содержащих идентификационные данные приложений-ботов и чатов в мессенджерах, в которые производится отправка оповещений. Для каждого мессенджера создан **Post Buil Task** со скриптом, который запускает рассылку оповещений:
-
-```
-java "-DprojectName=${JOB_NAME}" "-Denv=<enviroment>" "-DreportLink=${BUILD_URL}" "-Dcomm=<some comment>" "-Dconfig.file=./src/test/resources/notifications/<messenger name>.json" -jar ../allure-notifications-3.1.2.jar
-```
 ---
 ### Результаты выполнения тестов
 
@@ -110,9 +95,9 @@ java "-DprojectName=${JOB_NAME}" "-Denv=<enviroment>" "-DreportLink=${BUILD_URL}
 ![](src/test/resources/images/screenshots/telegram_notice.png)
 
 ---
-### Тестовая документация, сгенерированная в Allure TestOps по итогам прогона тестов
+### Тестовая документация, сгенерированная в [Allure TestOps](https://allure.autotests.cloud/project/670/dashboards) по итогам прохождения тестов
 ![](src/test/resources/images/screenshots/allure_testops_1.png)<br/><br/>
 ![](src/test/resources/images/screenshots/allure_testops_2.png)
 
-### [Задача](https://jira.autotests.cloud/projects/AUTO/issues/AUTO-501?filter=allopenissues) в таск-трекере Jira с данными, экспортированными из Allure TestOps
-![](src/test/resources/images/screenshots/jira.png)
+### [Задача](https://jira.autotests.cloud/browse/HOMEWORK-293) в таск-трекере Jira с данными, экспортированными из Allure TestOps
+![](src/test/resources/images/screenshots/jira_task.png)
