@@ -31,8 +31,8 @@ test
 -Dbrowser=${BROWSER} // запускаемый браузер
 -DbrowserVersion=${BROWSER_VERSION} // версия браузера
 -DbrowserSize=${BROWSER_SIZE} // размер окна браузера
--DremoteDriverUrl=${REMOTE_DRIVER_URL}/wd/hub/ // URL сервера, на котором запускаются тесты
--DvideoStorage=${REMOTE_DRIVER_URL}/video/ // URL сервера с видеофайлами выполнения тестов
+-DremoteDriverUrl=https://<login>:<password>@${REMOTE_DRIVER_URL}/wd/hub/ // URL сервера, на котором запускаются тесты
+-DvideoStorage=https://${REMOTE_DRIVER_URL}/video/ // URL сервера с видеофайлами выполнения тестов
 -Dthreads=${THREADS} // число потоков для прогона тестов
 ```
 Другой вариант передачи параметров - из файла remote.properties, расположенного по пути `src/test/resources/config/remote.properties`. Для этого вместо установки **Choice Parameter** в настройках Jenkins создается шаг сборки **Create/Update Text File** с созданием текстового файла, содержащего конфигурационные данные:<br/><br/>
