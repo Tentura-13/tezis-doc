@@ -96,4 +96,4 @@ test
 ![](src/test/resources/images/screenshots/allure_testops_2.png)
 
 ### [Задача](https://jira.autotests.cloud/browse/HOMEWORK-293) в таск-трекере Jira с данными, экспортированными из Allure TestOps
-![](src/test/resources/images/screenshots/jira_task.png)
+![](src/test/resources/images/screenshots/jira.png)
