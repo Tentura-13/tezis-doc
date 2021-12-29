@@ -131,7 +131,7 @@ public class HeaderTests extends TestBase {
                 open("https://www.tezis-doc.ru/"));
 
         step("Навести курсор на пункт " + name, () ->
-            $(".main-nav").$(byText(name)).hover());
+                $(".main-nav").$(byText(name)).hover());
 
         step("Проверить, что появился всплывающий pop-up пункта " + name, () ->
                 $("[class='" + value + "']").shouldBe(visible));
@@ -184,8 +184,8 @@ public class HeaderTests extends TestBase {
                 open("https://www.tezis-doc.ru/"));
 
         step("Открыть форму обратного звонка кликом по ссылке 'Перезвоните мне'", () -> {
-                $(".call-me").shouldBe(visible).shouldHave(text("Перезвоните мне")).click();
-                $(".modal").shouldBe(visible);
+            $(".call-me").shouldBe(visible).shouldHave(text("Перезвоните мне")).click();
+            $(".modal").shouldBe(visible);
         });
 
         step("Проверить текст тайтла и цвет слова 'ЗАКАЗАТЬ' (должен быть синий)", () -> {
@@ -220,7 +220,7 @@ public class HeaderTests extends TestBase {
         });
 
         step("Кликнуть по кнопке 'Оставить заявку'", () ->
-            $("#submitButton").click());
+                $("#submitButton").click());
 
         step("Проверить, что форма не отправляется", () -> {
             // сообщение об успешном приеме заявки не появляется
@@ -230,7 +230,7 @@ public class HeaderTests extends TestBase {
         });
 
         step("Проверить, что текст формы стал красного цвета", () ->
-            $("[for='demo-privacy-policy1']")
-                    .shouldHave(cssValue("color", "rgba(253, 107, 86, 1)")));
+                $("[for='demo-privacy-policy1']")
+                        .shouldHave(cssValue("color", "rgba(253, 107, 86, 1)")));
     }
 }
