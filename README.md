@@ -23,7 +23,8 @@
 
 ---
 ### Конфигурация для запуска тестов
-Параметры для запуска автотестов в удаленном браузере на билд-сервере проекта [autotests.cloud](https://selenoid.autotests.cloud/) задаются в настройках job [CI Jenkins](https://jenkins.autotests.cloud/) в виде **Choice Parameter** и передаются в код проекта через терминал как системные переменные (в фигурных скобках) с помощью следующих команд:
+Для запуска автотестов сконфигурирована :arrow_right: **[job](https://jenkins.autotests.cloud/job/08-WakeUpTheo-Tezis/)** :arrow_left: в CI Jenkins. В Jenkins job добавлена интеграция с Allure Report и Allure TestOps, а также настроена расслылка оповещений о результатах выполнения тестов в мессенджеры Slack и Telegram.<br/>
+Параметры для запуска автотестов в удаленном браузере на билд-сервере проекта [autotests.cloud](https://selenoid.autotests.cloud/) задаются в виде **Choice Parameter** в настройках job и передаются в код проекта через терминал как системные переменные с помощью следующих команд:
 
 ```
 clean
@@ -40,7 +41,7 @@ test
 При этом в терминал передается только команда `clean test`.
 
 
-В данном проекте запуск автотестов производился со следующими параметрами:<br/>
+Запуск автотестов производился со следующими параметрами:<br/>
 ![](src/test/resources/images/screenshots/build_params.png)
 
 ---
@@ -54,11 +55,6 @@ test
 ### Результаты выполнения тестов
 
 
-![](src/test/resources/images/logos/build.svg)
-### Сборка Jenkins
-:arrow_right: [**Jenkins Job**](https://jenkins.autotests.cloud/job/08-WakeUpTheo-Tezis/) :arrow_left:
-
----
 ### Отчет в Allure Report
 ![](src/test/resources/images/screenshots/allure_3.png)
 ![](src/test/resources/images/screenshots/allure_4.png)
