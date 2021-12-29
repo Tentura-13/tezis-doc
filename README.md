@@ -42,7 +42,7 @@ test
 
 
 Запуск автотестов производился со следующими параметрами:<br/>
-![](src/test/resources/images/screenshots/build_params.png)
+![](src/test/resources/images/screenshots/build_parameters.png)
 
 ---
 ### Интеграция с [Allure Report](https://docs.qameta.io/allure-report/) и [Allure TestOps](https://docs.qameta.io/allure-testops/)
