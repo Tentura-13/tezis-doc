@@ -6,7 +6,6 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.Link;
-import io.qameta.allure.Allure;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -23,6 +22,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.title;
+import static io.qameta.allure.Allure.parameter;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -74,8 +74,8 @@ public class HeaderTests extends TestBase {
     @Severity(SeverityLevel.NORMAL)
     @Link(name = "Главная страница", url = "https://www.tezis-doc.ru/")
     void checkItemsNames(String name, String link) {
-        Allure.parameter("name", name);
-        Allure.parameter("link", link);
+        parameter("name", name);
+        parameter("link", link);
         step("Открыть главную страницу", () ->
                 open("https://www.tezis-doc.ru/"));
 
@@ -98,8 +98,8 @@ public class HeaderTests extends TestBase {
     @Severity(SeverityLevel.CRITICAL)
     @Link(name = "Главная страница", url = "https://www.tezis-doc.ru/")
     void checkItemsLinks(String name, String link) {
-        Allure.parameter("name", name);
-        Allure.parameter("link", link);
+        parameter("name", name);
+        parameter("link", link);
         step("Открыть главную страницу", () ->
                 open("https://www.tezis-doc.ru/"));
 
@@ -125,8 +125,8 @@ public class HeaderTests extends TestBase {
     @Severity(SeverityLevel.NORMAL)
     @Link(name = "Главная страница", url = "https://www.tezis-doc.ru/")
     void checkHeaderPopups(String name, String value) {
-        Allure.parameter("name", name);
-        Allure.parameter("link", value);
+        parameter("name", name);
+        parameter("link", value);
         step("Открыть главную страницу", () ->
                 open("https://www.tezis-doc.ru/"));
 
