@@ -84,10 +84,10 @@ test
 
 ---
 ### Оповещения о статусе сборки в мессенджерах
-<img src="src/test/resources/images/logos/slack.svg" width="80" /><br/>
+<img src="./images/logos/slack.svg" width="80" /><br/>
 ![](./images/screenshots/slack_notice.png)
 ---
-<img src="src/test/resources/images/logos/telegram.svg" width="100" /><br/>
+<img src="./images/logos/telegram.svg" width="100" /><br/>
 ![](./images/screenshots/telegram_notice.png)
 
 ---
